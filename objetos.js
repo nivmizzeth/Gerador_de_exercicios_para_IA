@@ -1,36 +1,20 @@
-let DiagramaDesempenho = [
-    {nome: "Carlos", vendas:[450, 800, 300, 700, 650]},
-    {nome: "Mariana", vendas:[600, 620, 610, 590, 580]},
-    {nome: "Juliana", vendas:[300, 400, 500, 450, 350]},
-    {nome: "Roberto", vendas:[800, 200, 900, 100, 400]}
-]
-
-const vendaMeta = 500
-
-let totalVendas = 0
-let mediaVendas = 0
-let contMeta = 0
 
 
 
-for (const desempenho in DiagramaDesempenho) {
-    
-    
 
-
-    for (const venda in DiagramaDesempenho[desempenho].vendas) {
-
-        let vendas = DiagramaDesempenho[desempenho].vendas[venda]
-
-        totalVendas += vendas
-
-        
-
-    
-    
-    
+class cadastro {
+    constructor(nome, idade, sexo) {
+        this.nome = nome
+        this.idade = idade
+        this.sexo = sexo
     }
-    
-    mediaVendas = totalVendas / DiagramaDesempenho.length
-    console.log()
+    cadastrar() {
+        console.log(`Meu nome é ${this.nome} e tenho ${this.idade} sou do sexo ${this.sexo}`)
+    }
 }
+
+let pessoa1 = new cadastro("Leonardo", 40, "masculino")
+let pessoa2 = new cadastro("Juliana", 33, "feminino")
+let pessoa3 = new cadastro("Ricardo", 22,"masculino")
+
+pessoa1.cadastrar()
